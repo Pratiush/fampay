@@ -9,4 +9,5 @@ router.register(r'videos', views.VideoViewSet)
 urlpatterns = [
     path('ping/', views.healthCheck, name='ping'),
     path('',include(router.urls)),
+    path('task/',views.backgroundTask,name='task')
 ]

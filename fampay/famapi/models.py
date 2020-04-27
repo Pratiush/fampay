@@ -10,3 +10,8 @@ class videoEntity(models.Model):
 
 	def __str__(self):
 		return self.title
+
+	@classmethod
+	def create(cls,title,description,pub_date,thumbnail_url):
+		video = cls(title=title,description=description,pub_date=pub_date,thumbnail_url=thumbnail_url)
+		return video

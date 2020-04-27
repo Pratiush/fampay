@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'famapi.apps.FamapiConfig'
+    'famapi.apps.FamapiConfig',
+    'background_task'
 ]
 
 MIDDLEWARE = [
