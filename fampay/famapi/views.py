@@ -11,6 +11,7 @@ from rest_framework import viewsets
 from background_task import background
 import requests
 import json
+from rest_framework import filters
 # Create your views here.
 
 
@@ -28,6 +29,8 @@ class VideoViewSet(viewsets.ModelViewSet):
 	queryset = videoEntity.objects.all().order_by('-pub_date')
 	serializer_class = VideoSerializer
 	pagination_class = VideoPagination
+	search_fields = ['title','description']
+	filter_backends = (filters.SearchFilter,)
 
 
 
